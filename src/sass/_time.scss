@@ -1,0 +1,40 @@
+@import "variables";
+
+.time {
+  background: url("../img/background-time.svg") no-repeat 92% 97%;
+  &__wrap {
+    padding-bottom: 155px;
+  }
+  &__title {
+    width: 840px;
+    margin-bottom: 26px;
+  }
+  &__subtitle {
+    width: 700px;
+    margin-bottom: 71px;
+  }
+  &__reasons {
+    display: grid;
+    max-width: 1054px;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 48px;
+  }
+  &__item {
+    width: 508px;
+    background: #FFF;
+    box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.08);
+    padding: 30px 19px;
+    position: relative;
+  }
+  &__num {
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    top: -28%;
+    font-family: $font-2;
+    font-size: 180px;
+    font-weight: 900;
+    opacity: 0.15;
+  }
+}

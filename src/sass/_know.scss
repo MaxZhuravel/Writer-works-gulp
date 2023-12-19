@@ -1,0 +1,19 @@
+@import "variables";
+
+.know {
+  &__wrap {
+    display: flex;
+    align-items: center;
+    margin: 0 0 80px 0;
+  }
+  &__picture {
+    width: 45%;
+
+  }
+  &__body {
+    width: 55%;
+  }
+  &__title {
+    margin: 0 0 22px 0;
+  }
+}

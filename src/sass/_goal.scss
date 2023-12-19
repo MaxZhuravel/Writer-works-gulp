@@ -1,0 +1,46 @@
+@import "variables";
+
+.goal {
+  &__wrap {
+    margin-bottom: 100px;
+  }
+  &__main {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+  &__body {
+    width: 58%;
+  }
+  &__title {
+    font-family: $font-2;
+    margin-bottom: 39px;
+  }
+  &__subtitle {
+    margin-bottom: 47px;
+  }
+  &__text {
+    font-weight: 500;
+    font-size: 18px;
+  }
+  &__picture {
+    width: 42%;
+  }
+  &__task {
+    height: 267px;
+    background: url("/img/bg-zerno.png") $bg-color2 0% 0% / 100px 100px repeat;
+    color: $font-color2;
+    padding: 68px 0 0 40%;
+  }
+  &__task-title {
+    font-weight: 700;
+    width: 660px;
+    text-transform: uppercase;
+    margin-bottom: 23px;
+  }
+  &__task-text {
+    font-weight: 500;
+    opacity: 0.8;
+    width: 455px;
+  }
+}

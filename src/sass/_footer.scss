@@ -1,0 +1,62 @@
+@import "variables";
+
+.footer {
+  color: $font-color2;
+  background-color: $bg-color6;
+  box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.08);
+  &__wrap {
+    padding: 38px 0 21px 0;
+    display: flex;
+    margin: 0 0 51px 0;
+  }
+  &__brand{
+    display: block;
+    width: 17%;
+    text-align: center;
+    font-family: $font-logo;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 113.636%;
+    text-transform: uppercase;
+  }
+  &__logo-wrap{
+    display: flex;
+    align-items: center;
+  }
+  &__logo-img {
+    margin-right: 13px;
+    width: 18%;
+    svg {
+      max-height: 59px;
+    }
+  }
+  &__menu{
+    width: 70%;
+    padding: 7px 0 0 500px;
+  }
+  &__contacts {
+    width: 13%;
+    padding: 7px 0 0 0;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: right;
+  }
+  &__tel{
+    display: inline-block;
+    padding: 0 0 4px 0;
+    margin-bottom: 3px;
+    &:last-child {
+      margin-bottom: 3px;
+      background-color: red;
+    }
+  }
+  &__copy {
+    font-family: $font-2;
+    font-size: 14px;
+    text-transform: none;
+  }
+  &__contacts-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+}

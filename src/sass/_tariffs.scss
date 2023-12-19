@@ -1,0 +1,111 @@
+@import "variables";
+
+.tariffs {
+  position: relative;
+  &__wrap {
+    margin-bottom: 141px;
+  }
+  &__arrow {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    a {
+      display: inline-block;
+      height: 100px;
+      width: 22px;
+    }
+  }
+  &__title {
+    padding: 77px 0 0 81px;
+    margin: 0 0 60px 0;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("../img/zigzag-red.svg");
+      display: block;
+      width: 54.5px;
+      height: 12.5px;
+      left: 0;
+      top: 98px;
+    }
+  }
+  &__item {
+    width: 74%;
+    border: $border-color1 1px solid;
+    margin: 0 0 43px 0;
+    padding: 36px 20px 34px;
+    display: flex;
+  }
+  &__body {
+    width: 56%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__list {
+    width: 44%;
+    padding: 0 0 0 47px;
+    &_pad {
+      padding-top: 60px;
+    }
+  }
+  &__item-title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+  &__action {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__number {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+  }
+  &__profit {
+    font-size: 16px;
+    line-height: normal;
+    text-align: center;
+  }
+  &__btn {
+    width: 240px;
+    height: 60px;
+  }
+  &__list-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  &__list-item {
+    font-size: 18px;
+    line-height: normal;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 25px;
+    &::before {
+      content: "";
+      display: block;
+      background: url("../img/circle_list_red-icon.svg") no-repeat center;
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      left: 0;
+      top: 5px;
+    }
+  }
+  &__phd {
+    position: absolute;
+    transform: rotate(90deg);
+    font-size: 300px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 30px;
+    opacity: 0.05;
+    top: 45%;
+    left: 55.5%;
+  }
+}

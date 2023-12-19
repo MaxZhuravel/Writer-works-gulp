@@ -1,0 +1,48 @@
+@import "variables";
+
+.reasons {
+  font-family: $font-2;
+  &__wrap {
+    margin-bottom: 145px;
+  }
+  &__title {
+    margin-bottom: 90px;
+  }
+  &__picture {
+    padding-left: 70px;
+    width: 39%;
+  }
+  &__body {
+    width: 61%;
+    padding-right: 50px;
+  }
+  &__main {
+    display: flex;
+  }
+  &__row {
+    display: flex;
+    padding-top: 80px;
+    gap: 45px;
+    &_first {
+      padding-right: 170px;
+    }
+    &_second {
+      padding-left: 141px;
+    }
+  }
+  &__item {
+    font-size: 18px;
+    line-height: normal;
+    position: relative;
+  }
+  &__num {
+    position: absolute;
+    z-index: -1;
+    font-size: 150px;
+    line-height: 150px;
+    font-weight: 800;
+    color: $font-color6;
+    bottom: -20px;
+
+  }
+}

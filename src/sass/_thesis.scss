@@ -1,0 +1,55 @@
+@import "variables";
+
+.thesis {
+  background: url("../img/background-thesis.svg") no-repeat right top;
+  &__wrap {
+    padding-top: 100px;
+    margin-bottom: 30px;
+  }
+  &__title {
+    margin-bottom: 18px;
+    font-family: $font-2;
+  }
+  &__subtitle {
+    margin-bottom: 53px;
+  }
+  &__benefits {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 62px;
+  }
+  &__benefits-item {
+    max-width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__benefits-name {
+    font-weight: 500;
+  }
+  &__form {
+    padding: 35px 28px;
+    background: $bg-color4;
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  &__btn {
+    width: 228px;
+  }
+  &__input {
+    width: 233px;
+  }
+  &__area {
+    width: 338px;
+  }
+  &__tel {
+    width: 228px;
+  }
+  &__benefits-icon {
+    width: 64px;
+    height: 64px;
+  }
+}

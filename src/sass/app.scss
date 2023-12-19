@@ -1,0 +1,133 @@
+@import 'mixins';
+@import 'variables';
+@import 'responsive';
+@import "fonts";
+
+@import "header";
+@import "intro";
+@import "know";
+@import "tariffs";
+@import "reasons";
+@import "examples";
+@import "thesis";
+@import "goal";
+@import "time";
+@import "contact";
+@import "footer";
+
+body {
+  font-family: $font-1;
+  color: $font-color1;
+  font-size: 22px;
+  font-weight: 400;
+  background-color: $bg-color1;
+  line-height: normal;
+}
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.menu {
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 142.857%;
+  gap: 32px;
+  &__item {
+
+  }
+}
+
+.title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 100px;
+  text-transform: uppercase;
+  color: $font-color5;
+}
+
+.title-mid {
+  font-size: 48px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.title-s {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  position: relative;
+  padding-left: 67px;
+  &::before {
+    content: "";
+    display: block;
+    width: 54.5px;
+    height: 12.5px;
+    background: url("../img/zigzag-red.svg") no-repeat;
+    position: absolute;
+    left: 0;
+    top: 10px;
+  }
+}
+
+.text {
+  &_red {
+    color: $font-color4;
+  }
+  &_strong {
+    font-weight: 700;
+  }
+}
+
+.button {
+  font-size: 16px;
+  &_red {
+    background: $bg-color2;
+    color: $font-color2;
+  }
+  &_white {
+    background: $bg-color3;
+  }
+}
+
+.shadow-text {
+  text-align: center;
+  font-size: 225px;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  opacity: 0.05;
+  letter-spacing: -10px;
+}
+
+.form {
+  &__input {
+    border: 1px solid $border-color4;
+    background: $bg-color5;
+    height: 60px;
+    padding: 0 16px;
+    &_text {
+      font-size: 14px;
+    }
+    &_area {
+      font-size: 12px;
+      padding-top: 10px;
+    }
+
+  }
+  &__btn {
+    height: 60px;
+  }
+}
+
+.icon-box {
+  max-width: 100%;
+  object-fit: contain;
+  max-height: 100%;
+}

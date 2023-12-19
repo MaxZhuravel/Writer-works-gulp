@@ -1,0 +1,23 @@
+@import "variables";
+
+.examples {
+  font-family: $font-2;
+  &__title {
+    width: 95%;
+    margin-bottom: 30px;
+  }
+  &__subtitle {
+    width: 520px;
+    margin-bottom: 47px;
+  }
+  &__item {
+    border-bottom: $border-color3 solid 1px;
+    padding: 30px 0;
+    &:first-child {
+      border-top: $border-color3 solid 1px;
+    }
+  }
+  &__spec {
+    font-weight: 700;
+  }
+}
