@@ -3,7 +3,9 @@
 .contact {
   color: $font-color2;
   &__wrap {
-    background: $bg-color4;
+    background:
+      url("../img/background-contact1.svg") no-repeat 215% 30%, $bg-color4
+      -27% 100% url("../img/background-contact2.svg") no-repeat;
     box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.08);
     padding: 62px 0 90px 35px;
     margin-bottom: 100px;

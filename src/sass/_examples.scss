@@ -16,6 +16,10 @@
     &:first-child {
       border-top: $border-color3 solid 1px;
     }
+    &:hover {
+      background-color: $bg-color2;
+      color: $font-color2;
+    }
   }
   &__spec {
     font-weight: 700;

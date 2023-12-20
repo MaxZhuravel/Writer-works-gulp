@@ -34,8 +34,12 @@
     width: 74%;
     border: $border-color1 1px solid;
     margin: 0 0 43px 0;
-    padding: 36px 20px 34px;
+    padding: 36px 20px 34px 34px;
     display: flex;
+    &:hover {
+      background-color: $bg-color2;
+      color: $font-color2;
+    }
   }
   &__body {
     width: 56%;
@@ -55,6 +59,20 @@
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
+    &_hover {
+      position: relative;
+      padding-left: 35px;
+      &::before {
+        content: "";
+        display: block;
+        width: 54.5px;
+        height: 12.5px;
+        background: url("../img/zigzag-white.svg") no-repeat;
+        position: absolute;
+        left: 0;
+        top: 10px;
+      }
+    }
   }
   &__action {
     display: flex;
@@ -86,16 +104,6 @@
     margin-bottom: 15px;
     position: relative;
     padding-left: 25px;
-    &::before {
-      content: "";
-      display: block;
-      background: url("../img/circle_list_red-icon.svg") no-repeat center;
-      position: absolute;
-      width: 12px;
-      height: 12px;
-      left: 0;
-      top: 5px;
-    }
   }
   &__phd {
     position: absolute;

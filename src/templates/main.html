@@ -1,8 +1,3 @@
-<!--<svg class="icon-box" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">-->
-<!--  <use xlink:href="img/sprite.svg#arrow-red"></use>-->
-<!--</svg>-->
-
-
 <section class="intro">
   <div class="container">
     <div class="intro__wrap">
@@ -124,10 +119,10 @@
           <div class="tariffs__list-title">
             Якщо замовляти окремо:
           </div>
-          <div class="tariffs__list-item">Робота від 45 000 грн</div>
-          <div class="tariffs__list-item">Стаття ВАК від 2 300 грн</div>
-          <div class="tariffs__list-item">Стаття для Scopus від 2 800 грн</div>
-          <div class="tariffs__list-item">Автореферат від 12 000 грн</div>
+          <div class="tariffs__list-item list_red">Робота від 45 000 грн</div>
+          <div class="tariffs__list-item list_red">Стаття ВАК від 2 300 грн</div>
+          <div class="tariffs__list-item list_red">Стаття для Scopus від 2 800 грн</div>
+          <div class="tariffs__list-item list_red">Автореферат від 12 000 грн</div>
         </div>
       </div>
 
@@ -154,11 +149,11 @@
           <div class="tariffs__list-title">
             Якщо замовляти окремо:
           </div>
-          <div class="tariffs__list-item">Робота від 120 000 грн</div>
-          <div class="tariffs__list-item">Стаття ВАК від 2 800 грн</div>
-          <div class="tariffs__list-item">Стаття для Scopus від 3 300 грн</div>
-          <div class="tariffs__list-item">Автореферат від 19 000 грн</div>
-          <div class="tariffs__list-item">Монографія від 50 000 грн</div>
+          <div class="tariffs__list-item list_red">Робота від 120 000 грн</div>
+          <div class="tariffs__list-item list_red">Стаття ВАК від 2 800 грн</div>
+          <div class="tariffs__list-item list_red">Стаття для Scopus від 3 300 грн</div>
+          <div class="tariffs__list-item list_red">Автореферат від 19 000 грн</div>
+          <div class="tariffs__list-item list_red">Монографія від 50 000 грн</div>
         </div>
       </div>
 
@@ -179,8 +174,8 @@
           </div>
         </div>
         <div class="tariffs__list tariffs__list_pad">
-          <div class="tariffs__list-item">Тезиси (апробація)</div>
-          <div class="tariffs__list-item">Патенти (для технічних спеціальностей)</div>
+          <div class="tariffs__list-item list_red">Тезиси (апробація)</div>
+          <div class="tariffs__list-item list_red">Патенти (для технічних спеціальностей)</div>
         </div>
       </div>
     </div>
@@ -360,19 +355,19 @@
         </div>
       </div>
       <div class="thesis__form">
-        <form action="">
+        <form id="thesisForm" class="form">
           <input type="text"
                  name="name"
                  id="name"
                  value=""
                  placeholder="Ваше ім'я"
-                 class="form__input form__input_text thesis__input">
+                 class="form__input form__input_text thesis__input _name">
           <input type="tel"
                  name="tel"
                  id="tel"
                  value="+380"
                  placeholder="(99)999-99-99"
-                 class="form__input form__input_text thesis__tel">
+                 class="form__input form__input_text thesis__tel _tel">
           <textarea name="spec"
                     id="spec"
                     class="form__input form__input_area thesis__area"
@@ -483,16 +478,16 @@
               </span>
         </div>
       </div>
-      <form action="" id="formCont" class="contact__form form">
+      <form id="form1" class="contact__form form">
         <input type="text"
-               class="form__input"
+               class="form__input _name"
                placeholder="Ваше ім'я"
                name="name"
                value="">
         <input type="tel"
                name="tel"
                id="telCont"
-               class="form__input"
+               class="form__input _tel"
                value="+380">
         <button type="submit"
                 class="button button_red contact__btn">
@@ -502,3 +497,37 @@
     </div>
   </div>
 </section>
+
+<div class="popup" id="popupForm">
+  <div class="popup__body">
+    <div class="popup__content">
+      <div class="popup__close close-popup">
+        <svg class="icon-box" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <use xlink:href="img/sprite.svg#close-popup"></use>
+        </svg>
+      </div>
+      <form id="formPopup" class="form popup__form" action="">
+        <div class="popup__title">Замовити консультацію</div>
+        <div class="popup__subtitle">
+          Передзвонимо, проконсультуємо по всіх питаннях
+        </div>
+        <input type="text"
+               class="form__input popup__field _name"
+               placeholder="Ваше ім'я"
+               name="name"
+               value="">
+        <input type="tel"
+               name="tel"
+               class="form__input popup__field _tel"
+               value="+380">
+        <button type="submit"
+                class="button button_red popup__field">
+          Чекаю дзвінка
+        </button>
+        <div class="popup__personal">
+          Натискаючи кнопку, ви згоджуєтесь на обробку персональних даних.
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

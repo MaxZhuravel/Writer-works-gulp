@@ -3,17 +3,18 @@
 @import 'responsive';
 @import "fonts";
 
-@import "header";
-@import "intro";
-@import "know";
-@import "tariffs";
-@import "reasons";
-@import "examples";
-@import "thesis";
-@import "goal";
-@import "time";
-@import "contact";
-@import "footer";
+@import 'header';
+@import 'intro';
+@import 'know';
+@import 'tariffs';
+@import 'reasons';
+@import 'examples';
+@import 'thesis';
+@import 'goal';
+@import 'time';
+@import 'contact';
+@import 'footer';
+@import 'popup';
 
 body {
   font-family: $font-1;
@@ -22,6 +23,10 @@ body {
   font-weight: 400;
   background-color: $bg-color1;
   line-height: normal;
+}
+
+body.lock {
+  overflow: hidden;
 }
 
 .container {
@@ -86,6 +91,7 @@ body {
 }
 
 .button {
+  cursor: pointer;
   font-size: 16px;
   &_red {
     background: $bg-color2;
@@ -130,4 +136,59 @@ body {
   max-width: 100%;
   object-fit: contain;
   max-height: 100%;
+}
+
+.form__input._error{
+  box-shadow: 0 0 15px $bg-color2;
+}
+
+._error {
+  box-shadow: 0 0 15px $bg-color2;
+}
+
+.form {
+  position: relative;
+}
+.form:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.9) url("../img/loading.gif") center / 50px no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease 0s;
+}
+
+.form._sending::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.list_red {
+  &::before {
+    content: "";
+    display: block;
+    background: url("../img/circle_list_red-icon.svg") no-repeat center;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 0;
+    top: 5px;
+  }
+}
+
+.list_white {
+  &::before {
+    content: "";
+    display: block;
+    background: url("../img/circle_list_white-icon.svg") no-repeat center;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 0;
+    top: 5px;
+  }
 }

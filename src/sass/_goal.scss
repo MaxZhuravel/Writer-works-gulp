@@ -28,7 +28,7 @@
   }
   &__task {
     height: 267px;
-    background: url("/img/bg-zerno.png") $bg-color2 0% 0% / 100px 100px repeat;
+    background: url("../img/background-goal.svg") -50% 100% no-repeat, url("../img/bg-zerno.png") $bg-color2 0% 0% / 100px 100px repeat;
     color: $font-color2;
     padding: 68px 0 0 40%;
   }
