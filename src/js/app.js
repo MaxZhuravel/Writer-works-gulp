@@ -19,17 +19,22 @@ function formSend (event) {
     let formData = new FormData(form);
     formData.append('email', 'ring.maks@gmail.com');
 
-    let response = fetch('http://localhost:8000/message/send',{
+    let response = fetch('http://localhost:8000/message/sent',{
       method: 'POST',
       body: formData
     });
 
     response.then(
       function (result) {
+        console.log(result);
+        form.classList.remove('_sending');
+        form.reset();
         if (result.status === 200) {
-          console.log(result);
-          form.classList.remove('_sending');
-          form.reset();
+          popupClose(popup, false);
+          popupOpen(success);
+        }
+        else {
+
         }
       }
     );
@@ -98,7 +103,9 @@ let unlock = true;
 const timeout = 800;
 
 const popup = document.querySelector('#popupForm');
+const success = document.querySelector('#success');
 const btns = document.querySelectorAll('button');
+
 for (let btn of btns) {
   if(!btn.closest('form')) {
     btn.addEventListener('click', function(e) {
@@ -108,18 +115,20 @@ for (let btn of btns) {
   }
 }
 
-const popupCloseIcon = document.querySelector('.close-popup');
-popupCloseIcon.addEventListener('click', function(e) {
-  popupClose(popup);
-  e.preventDefault();
-})
+const popupCloseIcon = document.querySelectorAll('.close-popup');
 
-function popupOpen(popup) {
-  if (popup && unlock) {
-    const popupActive = document.querySelector('.popup.open');
+for (let el of popupCloseIcon) {
+  el.addEventListener('click', function(e) {
+    popupClose(e.target.closest('.popup'));
+    e.preventDefault();
+  });
+}
+
+function popupOpen(pop) {
+  if (pop && unlock) {
     bodyLock();
-    popup.classList.add('open');
-    popup.addEventListener('click', function (e) {
+    pop.classList.add('open');
+    pop.addEventListener('click', function (e) {
       if (!e.target.closest('.popup__content')) {
         popupClose(e.target.closest('.popup'))
       }
