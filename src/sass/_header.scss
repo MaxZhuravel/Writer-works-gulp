@@ -24,6 +24,7 @@
   &__logo-img {
     margin-right: 13px;
     width: 18%;
+    display: block;
     svg {
       max-height: 59px;
     }
@@ -52,5 +53,8 @@
   &__contacts-icon svg {
     width: 22px;
     height: 22px;
+  }
+  &__burger {
+    display: none;
   }
 }

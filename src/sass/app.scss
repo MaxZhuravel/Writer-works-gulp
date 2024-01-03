@@ -1,6 +1,5 @@
 @import 'mixins';
 @import 'variables';
-@import 'responsive';
 @import "fonts";
 
 @import 'header';
@@ -51,6 +50,9 @@ body.lock {
   line-height: 100px;
   text-transform: uppercase;
   color: $font-color5;
+  @media (max-width: 576px) {
+
+  }
 }
 
 .title-mid {
@@ -192,3 +194,5 @@ body.lock {
     top: 5px;
   }
 }
+
+@import 'responsive';
