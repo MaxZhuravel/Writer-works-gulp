@@ -47,7 +47,6 @@
     line-height: 38px; /* 115.152% */
     text-transform: uppercase;
     text-align: center;
-    padding: 0 10px;
   }
 
   .title-mid {
@@ -459,6 +458,28 @@
     }
     &__copy {
       grid-column: span 2;
+    }
+  }
+
+  .popup {
+    &__content {
+      width: 90%;
+      margin: 0 auto;
+      padding: 46px 22px 33px;
+    }
+    &__title {
+      font-size: 24px;
+    }
+    &__subtitle {
+      font-size: 14px;
+      width: 100%;
+    }
+    &__field {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    &__personal {
+      width: 100%;
     }
   }
 
