@@ -2,6 +2,18 @@ $font-1: 'Montserrat', sans-serif;
 $font-2: 'Roboto', sans-serif;
 $font-logo: 'PT Serif', serif;
 
+@font-face {
+  font-family: 'Gilroy';
+  src: local('Gilroy Regular'), local('Gilroy-Regular'),
+  url('../fonts/Gilroy-Regular/Gilroy-Regular.woff2') format('woff2'),
+  url('../fonts/Gilroy-Regular/Gilroy-Regular.woff') format('woff'),
+  url('../fonts/Gilroy-Regular/Gilroy-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+$font-copy: 'Gilroy', sans-serif;
+
 $font-color1: #000;
 $font-color2: #fff;
 $font-color3: #313131;

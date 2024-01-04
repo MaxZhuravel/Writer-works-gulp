@@ -483,4 +483,15 @@
     }
   }
 
+  .error {
+    gap: 30px;
+    &__name {
+      font-size: 55px;
+    }
+    &__num {
+      font-size: 150px;
+      line-height: 150px;
+    }
+  }
+
 }
