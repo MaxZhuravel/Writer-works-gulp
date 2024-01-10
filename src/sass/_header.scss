@@ -5,6 +5,7 @@
     padding: 38px 0 0 0;
     display: flex;
     margin: 0 0 51px 0;
+    justify-content: space-between;
   }
   &__brand{
     display: block;
@@ -30,15 +31,25 @@
     }
   }
   &__menu{
-    width: 75%;
-    padding: 7px 0 0 500px;
+
   }
   &__contacts {
-    width: 13%;
+    width: 155px;
     padding: 7px 0 0 0;
     font-size: 14px;
     font-weight: 500;
     text-align: right;
+    position: relative;
+    &:before {
+      position: absolute;
+      display: block;
+      content: "";
+      top: 10px;
+      left: 5px;
+      width: 14px;
+      height: 14px;
+      background: url("../img/telephone.svg") no-repeat center;
+    }
   }
   &__tel{
     display: inline-block;

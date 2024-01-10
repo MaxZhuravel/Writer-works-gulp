@@ -149,7 +149,7 @@ function bodyLock() {
   const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
 
   body.style.paddingRight = lockPaddingValue;
-  body.classList.add('lock');
+  body.classList.add('_lock');
 
   unlock = false;
   setTimeout(function() {
@@ -160,7 +160,7 @@ function bodyLock() {
 function bodyUnlock() {
   setTimeout(function () {
     body.style.paddingRight = '0px';
-    body.classList.remove('lock');
+    body.classList.remove('_lock');
   }, timeout);
 
   unlock = false;
@@ -174,3 +174,15 @@ document.addEventListener('keydown', function(e) {
     popupClose(popup);
   }
 });
+
+
+//бургер меню
+const iconBurger = document.querySelector('.header__burger');
+const headerMenu = document.querySelector('.header__menu');
+if (iconBurger) {
+  iconBurger.addEventListener('click', function(e) {
+    body.classList.toggle('_lock');
+    iconBurger.classList.toggle('_active');
+    headerMenu.classList.toggle('_active');
+  });
+}

@@ -32,12 +32,26 @@
   }
   &__menu{
     padding: 7px 0 0 0;
+    font-size: 14px;
+    display: flex;
+    gap: 36px;
   }
   &__contacts {
-    padding: 7px 0 0 0;
     font-size: 14px;
     font-weight: 500;
     text-align: right;
+    position: relative;
+    padding-top: 11px;
+    &:before {
+      position: absolute;
+      display: block;
+      content: "";
+      top: 13px;
+      left: 22px;
+      width: 14px;
+      height: 14px;
+      background: url("../img/footer-telephone.svg") no-repeat center;
+    }
   }
   &__tel{
     display: inline-block;
