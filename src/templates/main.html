@@ -83,12 +83,12 @@
 
 <section id="tariffs" class="tariffs">
   <div class="tariffs__arrow">
-    <a href="#tariffs" class="desktop">
+    <a data-goto=".tariffs" href="#" class="desktop">
       <svg class="icon-box" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <use xlink:href="img/sprite.svg#arrow-down"></use>
       </svg>
     </a>
-    <a href="#tariffs" class="mobile">
+    <a data-goto=".tariffs" href="#" class="mobile">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="38" viewBox="0 0 24 38" fill="none">
         <path d="M10.9393 37.0607C11.5251 37.6464 12.4749 37.6464 13.0607 37.0607L22.6066 27.5147C23.1924 26.9289 23.1924 25.9792 22.6066 25.3934C22.0208 24.8076 21.0711 24.8076 20.4853 25.3934L12 33.8787L3.51472 25.3934C2.92893 24.8076 1.97919 24.8076 1.3934 25.3934C0.807611 25.9792 0.807611 26.9289 1.3934 27.5147L10.9393 37.0607ZM10.5 0V36H13.5V0L10.5 0Z" fill="#D83838"/>
       </svg>
@@ -368,17 +368,18 @@
                  value=""
                  placeholder="Ваше ім'я"
                  class="form__input form__input_text thesis__input _name">
-          <input type="tel"
-                 name="tel"
-                 id="tel"
-                 value="+380"
-                 placeholder="(99)999-99-99"
-                 class="form__input form__input_text thesis__tel _tel">
+          <div class="form__box-tel">
+            <div class="form__pre-tel">
+              +380
+            </div>
+            <input type="tel"
+                   name="tel"
+                   class="form__input form__input_tel thesis__tel _tel">
+          </div>
           <textarea name="spec"
                     id="spec"
                     class="form__input form__input_area thesis__area"
-                    placeholder="Яка у вас спеціальність, терміни, які напрацювання маєте">
-              </textarea>
+                    placeholder="Яка у вас спеціальність, терміни, які напрацювання маєте?"></textarea>
           <button type="submit"
                   class="button button_red form__btn thesis__btn">
             Проконсультуватись
@@ -408,7 +409,7 @@
         </div>
       </div>
       <div class="goal__picture">
-        <img src="/img/woman.png" alt="woman sculpture">
+        <img src="./img/woman.png" alt="woman sculpture">
       </div>
     </div>
     <div class="goal__task">
@@ -490,11 +491,14 @@
                placeholder="Ваше ім'я"
                name="name"
                value="">
-        <input type="tel"
-               name="tel"
-               id="telCont"
-               class="form__input _tel"
-               value="+380">
+        <div class="contact__tel _tel">
+          <div class="form__pre-tel">
+            +380
+          </div>
+          <input type="tel"
+                 name="tel"
+                 class="form__input _tel">
+        </div>
         <button type="submit"
                 class="button button_red contact__btn">
           Чекаю дзвінка
@@ -519,13 +523,17 @@
         </div>
         <input type="text"
                class="form__input popup__field _name"
-               placeholder="Ваше ім'я"
+               placeholder="Введіть ім'я"
                name="name"
                value="">
-        <input type="tel"
-               name="tel"
-               class="form__input popup__field _tel"
-               value="+380">
+        <div class="popup__field popup__field_tel">
+          <div class="form__pre-tel">
+            +380
+          </div>
+          <input type="tel"
+                 name="tel"
+                 class="form__input _tel">
+        </div>
         <button type="submit"
                 class="button button_red popup__field">
           Чекаю дзвінка

@@ -32,6 +32,7 @@ body._lock {
 .container {
   max-width: 1160px;
   margin: 0 auto;
+  padding: 0;
 }
 
 .menu {
@@ -122,6 +123,10 @@ body._lock {
   letter-spacing: -10px;
 }
 
+.mobile {
+  display: none;
+}
+
 .form {
   &__input {
     border: 1px solid $border-color4;
@@ -129,13 +134,26 @@ body._lock {
     height: 60px;
     padding: 0 16px;
     &_text {
-      font-size: 14px;
+      font-size: 18px;
     }
     &_area {
       font-size: 12px;
       padding-top: 10px;
     }
-
+    &_tel {
+      font-size: 18px;
+    }
+  }
+  &__box-tel {
+    display: flex;
+  }
+  &__pre-tel {
+    display: flex;
+    align-items: center;
+    background-color: #FBFBFB;
+    border: 1px solid #D9D9D9;
+    width: 60px;
+    color: $font-color1;
   }
   &__btn {
     height: 60px;
@@ -143,17 +161,16 @@ body._lock {
 }
 
 .icon-box {
-  max-width: 100%;
-  object-fit: contain;
+  width: 100%;
   max-height: 100%;
 }
 
 .form__input._error{
   box-shadow: 0 0 15px $bg-color2;
-}
-
-._error {
-  box-shadow: 0 0 15px $bg-color2;
+  &::placeholder {
+    color: $font-color4;
+    opacity: 0.8;
+  }
 }
 
 .form {

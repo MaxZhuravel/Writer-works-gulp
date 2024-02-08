@@ -4,3 +4,4 @@ dist
 
 package-lock.json
 *.lock
+/src/fonts/Gilroy-Regular.zip

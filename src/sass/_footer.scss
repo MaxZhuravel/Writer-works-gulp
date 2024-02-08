@@ -11,6 +11,7 @@
   }
   &__brand{
     display: block;
+    width: 125px;
     text-align: center;
     font-family: $font-logo;
     font-size: 22px;
@@ -47,7 +48,7 @@
       display: block;
       content: "";
       top: 13px;
-      left: 22px;
+      right: 135px;
       width: 14px;
       height: 14px;
       background: url("../img/footer-telephone.svg") no-repeat center;

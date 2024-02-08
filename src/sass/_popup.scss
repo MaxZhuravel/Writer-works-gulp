@@ -57,6 +57,12 @@
     width: 460px;
     height: 60px;
     margin-bottom: 22px;
+    &_tel {
+      display: flex;
+      input {
+        width: 400px;
+      }
+    }
   }
   &__personal {
     width: 400px;
@@ -75,7 +81,6 @@
   transform: perspective(600px) translate(0px, 0%) rotateX(0);
   opacity: 1;
 }
-
 
 // модальна форма успішного відправлення
 .success {

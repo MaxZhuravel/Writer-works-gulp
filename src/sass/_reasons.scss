@@ -3,14 +3,19 @@
 .reasons {
   font-family: $font-2;
   &__wrap {
-    margin-bottom: 145px;
+    margin: 0 auto 60px;
+    max-width: 1440px;
   }
   &__title {
-    margin-bottom: 90px;
+    margin-bottom: 70px;
   }
   &__picture {
-    padding-left: 70px;
+    //padding-left: 70px;
     width: 39%;
+    svg {
+      height: 482px;
+
+    }
   }
   &__body {
     width: 61%;

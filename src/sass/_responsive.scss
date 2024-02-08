@@ -4,20 +4,182 @@
   Десктоп маленький
  */
 @media screen and (max-width: 1429px) {
-
+  .tariffs {
+    &__phd{
+      font-size: 270px;
+    }
+  }
 }
 
 /**
   Планшет горизонтальний
  */
 @media screen and (max-width: 1279px) {
+  .tariffs {
+    &__phd{
+      font-size: 220px;
+    }
+  }
+  .shadow-text {
+    font-size: 200px;
+  }
+  .time {
+    &__reasons {
+      column-gap: 40px;
+    }
+  }
+  .goal {
+    &__task-title {
+      width: 95%;
+    }
+  }
+}
 
+@media screen and (max-width: 1170px) {
+  .header {
+    &__wrap {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+  }
+  .intro {
+    &__wrap {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+  }
+  .know {
+    &__wrap {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+  }
+  .tariffs {
+    &__wrap {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+  }
+  .reasons {
+    &__wrap {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+  }
+  .examples {
+    &__wrap{
+      .container {
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+    }
+  }
+  .thesis {
+    &__wrap {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+    &__form {
+      margin-right: -10px;
+      margin-left: -10px;
+    }
+    &__area {
+      width: 250px;
+    }
+    &__btn {
+      width: 180px;
+    }
+  }
+  .goal {
+    &__main {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+  }
+  .time {
+    &__title {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+    &__subtitle {
+      padding-left: 75px;
+      &::before {
+        left: 10px;
+      }
+    }
+  }
+  .footer {
+    &__wrap {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
 }
 
 /**
   Планшет вертикальний
  */
 @media screen and (max-width: 1023px) {
+  .shadow-text {
+    font-size: 140px;
+  }
+  .tariffs {
+    &__phd{
+      display: none;
+    }
+    &__item {
+      width: 100%;
+    }
+  }
+  .time {
+    &__title {
+      width: 100%;
+    }
+    &__subtitle {
+      width: 100%;
+    }
+  }
+  .thesis {
+    &__area {
+      display: none;
+    }
+    &__btn {
+      width: 200px;
+    }
+  }
+  .contact {
+    &__wrap {
+      gap: 20px;
+      padding: 40px 10px 70px 25px;
+    }
+    &__title {
+      font-size: 28px;
+    }
+  }
+  .reasons {
+    &__row {
+      gap: 30px;
+      &_first {
+        padding-right: 0;
+      }
+      &_second {
+        padding-left: 0;
+      }
+    }
+  }
+  .goal {
+    &__body {
+      margin-bottom: 30px;
+    }
+  }
+  .footer {
+    &__wrap {
+      grid-template-columns: 1fr 1fr auto;
+    }
+    &__contacts {
+      width: 155px;
+    }
+  }
 
 }
 
@@ -25,7 +187,116 @@
   Мобільні пристрої
  */
 @media screen and (max-width: 767px) {
-
+  .title {
+    font-size: 48px;
+    line-height: normal;
+  }
+  .title-mid {
+    font-size: 38px;
+  }
+  .menu {
+    gap: 20px;
+    &__list {
+      gap: 15px;
+    }
+  }
+  .shadow-text {
+    font-size: 100px;
+  }
+  .form {
+    &__pre-tel {
+      padding-right: 5px;
+      justify-content: end;
+    }
+    &__input._tel {
+      flex-grow: 1;
+      flex-shrink: 1;
+    }
+    &__box-tel {
+      width: 100%;
+    }
+  }
+  .intro {
+    &__wrap {
+      margin-bottom: 40px;
+    }
+    &__num {
+      font-size: 64px;
+    }
+    &__stat-desc{
+      font-size: 18px;
+    }
+  }
+  .know {
+    &__picture {
+      svg {
+        height: 300px;
+      }
+    }
+  }
+  .tariffs {
+    &__wrap {
+      margin-bottom: 80px;
+    }
+  }
+  .reasons {
+    &__num {
+      font-size: 100px;
+    }
+    &__row {
+      padding-top: 40px;
+    }
+    &__body {
+      padding-right: 10px;
+    }
+  }
+  .goal {
+    &__task {
+      padding-top: 20px;
+    }
+    &__task-text {
+      width: 100%;
+    }
+  }
+  .thesis {
+    &__form {
+      form {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+    &__input, .thesis__area, .thesis__tel, .thesis__btn {
+      width: 100%;
+      height: 60px;
+    }
+    &__benefits {
+      gap: 10px;
+    }
+    &__benefits-name {
+      font-size: 18px;
+    }
+  }
+  .contact {
+    &__wrap {
+      flex-direction: column;
+      padding: 43px 20px 0;
+    }
+    &__title {
+      font-size: 24px;
+    }
+    &__body {
+      max-width: 100%;
+    }
+    &__form {
+      padding-top: 0;
+      margin-bottom: 83px;
+    }
+  }
+  .footer {
+    &__menu {
+      gap: 15px;
+    }
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -35,11 +306,18 @@
 
   .container {
     width: 100%;
-    padding: 0 20px;
   }
 
   .menu {
     padding: 0;
+    &__list {
+      gap: 0;
+      font-weight: 700;
+      padding-right: 40px;
+    }
+    &__item {
+      padding: 0;
+    }
   }
 
   .title {
@@ -75,6 +353,10 @@
     }
   }
 
+  .form__box-tel {
+    width: 100%;
+  }
+
   .header {
     &__wrap {
       justify-content: space-between;
@@ -82,7 +364,19 @@
       margin-bottom: 23px;
     }
     &__contacts {
-      display: none;
+      width: 100%;
+      padding-right: 10px;
+      position: relative;
+      &:before {
+        position: absolute;
+        display: block;
+        content: "";
+        top: 10px;
+        right: 145px;
+        width: 14px;
+        height: 14px;
+        background: url("../img/footer-telephone.svg") no-repeat center;
+      }
     }
     &__menu {
       opacity: 0;
@@ -90,18 +384,23 @@
       position: fixed;
       top: 0;
       right: -65%;
-      width: 65%;
+      width: 66%;
       height: 100%;
       background-color: $bg-color2;
       color: $font-color2;
-      flex-direction: column;
-      align-items: flex-end;
-      padding: 100px 40px 0 0;
+      padding: 100px 0 0 0;
       transition: all 0.3s ease 0s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       &._active {
         opacity: 1;
         visibility: visible;
         right: 0;
+      }
+      & > .menu__list {
+        flex-direction: column;
+        align-items: flex-end;
       }
       & > .menu__item {
         font-weight: 700;
@@ -172,6 +471,9 @@
     }
     &__logo-img {
       width: 24px;
+    }
+    &__tel {
+      display: block;
     }
   }
 
@@ -399,17 +701,9 @@
       gap: 5px;
     }
     &__form {
-      margin: 0 -20px;
+      margin: 0;
       padding-left: 38px;
       padding-right: 38px;
-      form {
-        flex-direction: column;
-        gap: 15px;
-      }
-    }
-    &__input, .thesis__area, .thesis__tel, .thesis__btn {
-      width: 100%;
-      height: 60px;
     }
   }
 
@@ -481,13 +775,8 @@
 
   .contact {
     &__wrap {
-      margin: 0 -20px 74px;
-      padding: 43px 20px 0;
-      flex-direction: column;
+      margin: 0 0 74px;
       gap: 22px;
-    }
-    &__body {
-      max-width: 100%;
     }
     &__title {
       font-size: 28px;
@@ -496,10 +785,7 @@
     &__subtitle {
       font-size: 14px;
     }
-    &__form {
-      padding-top: 0;
-      margin-bottom: 83px;
-    }
+
   }
 
   .footer {
@@ -519,11 +805,16 @@
       gap: 22px;
       width: 100%;
       justify-content: center;
+      padding-top: 0;
     }
     &__contacts {
       grid-column: 2/3;
       grid-row: 1/2;
-      width: auto;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+
     }
     &__copy {
       grid-column: span 2;

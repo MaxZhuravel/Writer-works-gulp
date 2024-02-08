@@ -9,7 +9,6 @@
   }
   &__brand{
     display: block;
-    width: 12%;
     color: $font-color1;
     text-align: center;
     font-family: $font-logo;
@@ -24,14 +23,20 @@
   }
   &__logo-img {
     margin-right: 13px;
-    width: 18%;
+    width: 24px;
     display: block;
     svg {
       max-height: 59px;
     }
   }
   &__menu{
-
+    li:hover {
+      font-size: 1.07em;
+      transition: all 0.5s ease 0s;
+      a {
+        border-bottom: $bg-color2 1px solid;
+      }
+    }
   }
   &__contacts {
     width: 155px;
@@ -45,7 +50,7 @@
       display: block;
       content: "";
       top: 10px;
-      left: 5px;
+      right: 135px;
       width: 14px;
       height: 14px;
       background: url("../img/telephone.svg") no-repeat center;

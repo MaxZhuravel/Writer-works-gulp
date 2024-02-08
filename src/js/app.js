@@ -2,24 +2,25 @@
 
 const body = document.querySelector('body')
 
+// слухачі подій на всіх формах
 const forms = document.querySelectorAll('form');
 for (let item of forms) {
   item.addEventListener('submit', formSend);
 }
 
+// функція-обробник форми
 function formSend (event) {
   event.preventDefault();
   const form = event.target;
   let error = formValidate(form);
 
   if (error === 0) {
-
     form.classList.add('_sending');
-
     let formData = new FormData(form);
+    formData.set('tel', '+380' + formData.get('tel'));
     formData.append('email', 'ring.maks@gmail.com');
 
-    let response = fetch('http://localhost:8000/message/sent',{
+    let response = fetch('http://localhost:8000/message/send',{
       method: 'POST',
       body: formData
     });
@@ -34,16 +35,17 @@ function formSend (event) {
           popupOpen(success);
         }
         else {
-
+          location.href='error.html';
         }
       }
     );
 
   } else {
-    alert('Заповніть поля!');
+
   }
 }
 
+// функція для валідації форми
 function formValidate(form) {
   let error = 0;
   for (let elem of form.elements) {
@@ -52,11 +54,25 @@ function formValidate(form) {
       if (elem.value.length < 2) {
         formAddError(elem);
         error++;
+        elem.setAttribute('placeholder', 'Введіть ім`я');
+        elem.value = '';
       }
     } else if (elem.classList.contains('_tel')) {
-      if (elem.value.length < 13) {
+      if (!Number.isInteger(+elem.value)) {
         formAddError(elem);
         error++;
+        elem.setAttribute('placeholder', 'Введіть тільки цифри!');
+        elem.value = '';
+      } else if (elem.value.length < 9) {
+        formAddError(elem);
+        error++;
+        elem.setAttribute('placeholder', 'Замало цифр!');
+        elem.value = '';
+      } else if (elem.value.length > 9) {
+        formAddError(elem);
+        error++;
+        elem.setAttribute('placeholder', 'Забагато цифр!');
+        elem.value = '';
       }
     }
   }
@@ -71,6 +87,7 @@ function formRemoveError(field) {
   field.classList.remove('_error');
 }
 
+// хавер на тарифах
 const tariffs = document.getElementsByClassName('tariffs__item');
 for (let item of tariffs) {
   const title = item.getElementsByClassName('tariffs__item-title')[0];
@@ -96,17 +113,17 @@ for (let item of tariffs) {
   })
 }
 
+
 // створення модального вікна
+let unlock = true; // прапорець, який блокує відкриття інших попапів під час анімації
 
-let unlock = true;
-
-const timeout = 800;
+const timeout = 800; // час анімації відкриття
 
 const popup = document.querySelector('#popupForm');
 const success = document.querySelector('#success');
-const btns = document.querySelectorAll('button');
+const buttons = document.querySelectorAll('button');
 
-for (let btn of btns) {
+for (let btn of buttons) {
   if(!btn.closest('form')) {
     btn.addEventListener('click', function(e) {
       popupOpen(popup);
@@ -116,7 +133,6 @@ for (let btn of btns) {
 }
 
 const popupCloseIcon = document.querySelectorAll('.close-popup');
-
 for (let el of popupCloseIcon) {
   el.addEventListener('click', function(e) {
     popupClose(e.target.closest('.popup'));
@@ -142,15 +158,16 @@ function popupClose(popupActive, doUnlock = true) {
     if(doUnlock) {
       bodyUnlock();
     }
+    const inputs = popupActive.querySelectorAll('.form__input');
+    for (let ex of inputs) {
+      formRemoveError(ex);
+    }
   }
 }
 
 function bodyLock() {
-  const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
-
-  body.style.paddingRight = lockPaddingValue;
+  body.style.paddingRight = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
   body.classList.add('_lock');
-
   unlock = false;
   setTimeout(function() {
     unlock = true;
@@ -162,7 +179,6 @@ function bodyUnlock() {
     body.style.paddingRight = '0px';
     body.classList.remove('_lock');
   }, timeout);
-
   unlock = false;
   setTimeout(function () {
     unlock = true;
@@ -170,7 +186,7 @@ function bodyUnlock() {
 }
 
 document.addEventListener('keydown', function(e) {
-  if (e.which === 27) {
+  if (e.key === 'Escape') {
     popupClose(popup);
   }
 });
@@ -185,4 +201,27 @@ if (iconBurger) {
     iconBurger.classList.toggle('_active');
     headerMenu.classList.toggle('_active');
   });
+}
+
+//плавна прокрутка
+const menuLinks = document.querySelectorAll('a[data-goto]');
+if (menuLinks) {
+  for (let link of menuLinks) {
+    link.addEventListener('click', onLinkClick);
+  }
+
+  function onLinkClick(e) {
+    const link = e.target.closest('a');
+    console.log(link);
+    if (link.dataset.goto && document.querySelector(link.dataset.goto)) {
+      const gotoBlock = document.querySelector(link.dataset.goto);
+      const gotoBlockValue = gotoBlock.getBoundingClientRect()
+        .top + scrollY;
+      window.scrollTo({
+        top: gotoBlockValue,
+        behavior: 'smooth'
+      });
+    }
+    e.preventDefault();
+  }
 }

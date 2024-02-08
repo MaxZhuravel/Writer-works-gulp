@@ -9,10 +9,17 @@
     position: absolute;
     top: -100px;
     left: 50%;
+    transform: translate(-50%, 0);
     a {
       display: inline-block;
-      height: 100px;
-      width: 22px;
+      padding: 0 20px 20px;
+      svg {
+        height: 100px;
+        width: 22px;
+      }
+    }
+    a.mobile {
+      display: none;
     }
   }
   &__title {
