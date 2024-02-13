@@ -39,11 +39,12 @@ function formSend (event) {
         }
       }
     );
-
   } else {
 
   }
 }
+
+
 
 // функція для валідації форми
 function formValidate(form) {
@@ -51,7 +52,7 @@ function formValidate(form) {
   for (let elem of form.elements) {
     formRemoveError(elem);
     if (elem.classList.contains('_name')) {
-      if (elem.value.length < 2) {
+      if (elem.value.length < 3) {
         formAddError(elem);
         error++;
         elem.setAttribute('placeholder', 'Введіть ім`я');
@@ -86,6 +87,16 @@ function formAddError(field) {
 function formRemoveError(field) {
   field.classList.remove('_error');
 }
+
+function inputsOnFocus () {
+  const inputs = document.querySelectorAll('input');
+  for (let el of inputs) {
+    el.addEventListener('focus', () => {
+      formRemoveError(el);
+    })
+  }
+}
+inputsOnFocus();
 
 // хавер на тарифах
 const tariffs = document.getElementsByClassName('tariffs__item');
@@ -195,12 +206,20 @@ document.addEventListener('keydown', function(e) {
 //бургер меню
 const iconBurger = document.querySelector('.header__burger');
 const headerMenu = document.querySelector('.header__menu');
+const menuBurgerLinks = headerMenu.children
 if (iconBurger) {
   iconBurger.addEventListener('click', function(e) {
     body.classList.toggle('_lock');
     iconBurger.classList.toggle('_active');
     headerMenu.classList.toggle('_active');
   });
+  for (let link of menuBurgerLinks) {
+    link.addEventListener('click', function(e) {
+      body.classList.toggle('_lock');
+      iconBurger.classList.toggle('_active');
+      headerMenu.classList.toggle('_active');
+    });
+  }
 }
 
 //плавна прокрутка

@@ -41,3 +41,11 @@ a, a:focus, a:visited{
 textarea {
   resize: none;
 }
+
+textarea:focus {
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
